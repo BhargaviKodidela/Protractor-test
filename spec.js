@@ -26,9 +26,12 @@ describe('Mesaforte-ui Demo App', function(){
 	    expect(element(by.buttonText('Add')).isPresent()).toBe(true);
 	    element(by.buttonText('Add')).click();
 
-	    expect(element(by.model('rulesset.newBean.names_lang[vm.currentLang].text1')).isPresent()).toBe(true);
-	    element(by.model('rulesset.newBean.names_lang[vm.currentLang].text')).sendKeys('built');
+	    expect(element(by.model('rulesset.newBean.names_lang[vm.currentLang].text')).isPresent()).toBe(true);
+	    element(by.model('rulesset.newBean.names_lang[vm.currentLang].text')).sendKeys('clientSettingsRule');
 
+	    expect(element(by.model('rulesset.newBean.category')).isPresent()).toBe(true);
+	    element(by.model('rulesset.newBean.category')).sendKeys('built');
+	    element(by.buttonText('Save')).click();
 		/*browser.driver.wait(function() {
             return element(by.css('topnavbar')).isDisplayed().then(function(IsVisible) {
                 return IsVisible;
