@@ -5,6 +5,11 @@ exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   allScriptsTimeout: 60000,
   specs: ['spec.js'],
+  //phantom.js code 
+  capabilities:{
+          browserName: 'phantomjs',
+          'phantomjs.cli.args': ['--logfile=PATH', '--loglevel=DEBUG'] 
+        },
   plugins: [{
         package: 'jasmine2-protractor-utils',
         disableHTMLReport: false,
